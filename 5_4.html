@@ -47,7 +47,7 @@ Bisecting: 1769 revisions left to test after this
 
 <p>现在git自动签出(checkout)一个更老的版本. 继续这样做, 用"git bisect good","git bisect bad"告诉git每次签出的版本是否没有问题; 你现在可以注意一下当前的签出的版本, 你会发现git在用"二分查找(binary search)方法"签出"bad"和"good"之间的一个版本(commit or revison).</p>
 
-<p>在这个项目(case)中, 经过13次尝试, 找出了导致问题的提交(guilty commit). 你可以用 <a href="../www.kernel.org/pub/software/scm/git/docs/git-show.html">git show</a> 命令查看这个提交(commit), 找出是谁做的修改，然后写邮件给TA. 最后, 运行:</p>
+<p>在这个项目(case)中, 经过13次尝试, 找出了导致问题的提交(guilty commit). 你可以用 <a href="http://www.kernel.org/pub/software/scm/git/docs/git-show.html">git show</a> 命令查看这个提交(commit), 找出是谁做的修改，然后写邮件给TA. 最后, 运行:</p>
 
 <pre><code>$ git bisect reset
 </code></pre>

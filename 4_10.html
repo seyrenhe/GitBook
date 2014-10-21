@@ -33,16 +33,16 @@
 
 <p>在大的仓库中, git靠压缩历史信息来节约磁盘和内存空间.</p>
 
-<p>压缩操作并不是自动进行的, 你需要手动执行 <a href="../www.kernel.org/pub/software/scm/git/docs/git-gc.html">git gc</a>:</p>
+<p>压缩操作并不是自动进行的, 你需要手动执行 <a href="http://www.kernel.org/pub/software/scm/git/docs/git-gc.html">git gc</a>:</p>
 
 <pre><code>$ git gc
 </code></pre>
 
-<p>压缩操作比较耗时, 你运行<a href="../www.kernel.org/pub/software/scm/git/docs/git-gc.html">git gc</a>命令最好是在你没有其它工作的时候.</p>
+<p>压缩操作比较耗时, 你运行<a href="http://www.kernel.org/pub/software/scm/git/docs/git-gc.html">git gc</a>命令最好是在你没有其它工作的时候.</p>
 
 <h3>保持可靠性</h3>
 
-<p><a href="../www.kernel.org/pub/software/scm/git/docs/git-fsck.html">git fsck</a> 运行一些仓库的一致性检查, 如果有任何问题就会报告. 这项操作也有点耗时, 通常报的警告就是“悬空对象"(dangling objects).</p>
+<p><a href="http://www.kernel.org/pub/software/scm/git/docs/git-fsck.html">git fsck</a> 运行一些仓库的一致性检查, 如果有任何问题就会报告. 这项操作也有点耗时, 通常报的警告就是“悬空对象"(dangling objects).</p>
 
 <pre><code>$ git fsck
 dangling commit 7281251ddd2a61e38657c827739c57015671a6b3

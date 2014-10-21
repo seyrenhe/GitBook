@@ -40,7 +40,7 @@
 
 <p>这条件命令会把你工作目录中所有未提交的内容清空(当然这不包括未置于版控制下的文件 untracked files). 从另一种角度来说, 这会让"git diff" 和"git diff --cached"命令的显示法都变为空.</p>
 
-<p>如果你只是要恢复一个文件,如"hello.rb", 你就要使用 <a href="../www.kernel.org/pub/software/scm/git/docs/git-checkout.html">git checkout</a></p>
+<p>如果你只是要恢复一个文件,如"hello.rb", 你就要使用 <a href="http://www.kernel.org/pub/software/scm/git/docs/git-checkout.html">git checkout</a></p>
 
 <pre><code>$ git checkout -- hello.rb
 </code></pre>
@@ -62,7 +62,7 @@
 
 <h4>创建新提交来修复错误</h4>
 
-<p>创建一个新的，撤消(revert)了前期修改的提交(commit)是很容易的; 只要把出错的提交(commit)的名字(reference)做为参数传给命令: <a href="../www.kernel.org/pub/software/scm/git/docs/git-revert.html">git revert</a>就可以了; 下面这条命令就演示了如何撤消最近的一个提交:</p>
+<p>创建一个新的，撤消(revert)了前期修改的提交(commit)是很容易的; 只要把出错的提交(commit)的名字(reference)做为参数传给命令: <a href="http://www.kernel.org/pub/software/scm/git/docs/git-revert.html">git revert</a>就可以了; 下面这条命令就演示了如何撤消最近的一个提交:</p>
 
 <pre><code>$ git revert HEAD
 </code></pre>
@@ -80,9 +80,9 @@
 
 <h4>修改提交来修复错误</h4>
 
-<p>如果你刚刚做了某个提交(commit), 但是你又想马上修改这个提交;  <a href="../www.kernel.org/pub/software/scm/git/docs/git-commit.html">git commit</a> 现在支持一个叫<strong>--amend</strong>的参数，它能让你修改刚才的这个提交(HEAD commit). 这项机制能让你在代码发布前,添加一些新的文件或是修改你的提交注释(commit message).</p>
+<p>如果你刚刚做了某个提交(commit), 但是你又想马上修改这个提交;  <a href="http://www.kernel.org/pub/software/scm/git/docs/git-commit.html">git commit</a> 现在支持一个叫<strong>--amend</strong>的参数，它能让你修改刚才的这个提交(HEAD commit). 这项机制能让你在代码发布前,添加一些新的文件或是修改你的提交注释(commit message).</p>
 
-<p>如果你在老提交(older commit)里发现一个错误, 但是现在还没有发布到代码服务器上. 你可以使用 <a href="../www.kernel.org/pub/software/scm/git/docs/git-rebase.html">git rebase</a>命令的交互模式, "git rebase -i"会提示你在编辑中做相关的修改. 这样其实就是让你在rebase的过程来修改提交.</p>
+<p>如果你在老提交(older commit)里发现一个错误, 但是现在还没有发布到代码服务器上. 你可以使用 <a href="http://www.kernel.org/pub/software/scm/git/docs/git-rebase.html">git rebase</a>命令的交互模式, "git rebase -i"会提示你在编辑中做相关的修改. 这样其实就是让你在rebase的过程来修改提交.</p>
 
 
   </div>

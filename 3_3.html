@@ -101,7 +101,7 @@ $ git commit -a
 
 <h3>如何合并</h3>
 
-<p>你可以用下面的命令来合并两个分离的分支：<a href="../www.kernel.org/pub/software/scm/git/docs/git-merge.html">git merge</a>:</p>
+<p>你可以用下面的命令来合并两个分离的分支：<a href="http://www.kernel.org/pub/software/scm/git/docs/git-merge.html">git merge</a>:</p>
 
 <pre><code>$ git merge branchname
 </code></pre>
@@ -127,13 +127,13 @@ Automatic merge failed; fix conflicts and then commit the result.
 <p>如果执行自动合并没有成功的话，git会在索引和工作树里设置一个特殊的状态，
 提示你如何解决合并中出现的冲突。</p>
 
-<p>有冲突(conflicts)的文件会保存在索引中，除非你解决了问题了并且更新了索引，否则执行 <a href="../www.kernel.org/pub/software/scm/git/docs/git-commit.html">git commit</a>都会失败:</p>
+<p>有冲突(conflicts)的文件会保存在索引中，除非你解决了问题了并且更新了索引，否则执行 <a href="http://www.kernel.org/pub/software/scm/git/docs/git-commit.html">git commit</a>都会失败:</p>
 
 <pre><code>$ git commit
 file.txt: needs merge
 </code></pre>
 
-<p>如果执行 <a href="../www.kernel.org/pub/software/scm/git/docs/git-status.html">git status</a> 会显示这些文件没有合并(unmerged),这些有冲突的文件里面会添加像下面的冲突标识符:</p>
+<p>如果执行 <a href="http://www.kernel.org/pub/software/scm/git/docs/git-status.html">git status</a> 会显示这些文件没有合并(unmerged),这些有冲突的文件里面会添加像下面的冲突标识符:</p>
 
 <pre><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:file.txt
 Hello world

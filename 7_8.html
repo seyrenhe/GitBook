@@ -29,7 +29,7 @@
   <div class="span-21">
     <h2>术语表</h2>
 
-<p>我们把在Git里常用的一些名词做了解释列在这里。这些名词(terms)全部来自<a href="../www.kernel.org/pub/software/scm/git/docs/gitglossary.html">Git Glossary</a>。</p>
+<p>我们把在Git里常用的一些名词做了解释列在这里。这些名词(terms)全部来自<a href="http://www.kernel.org/pub/software/scm/git/docs/gitglossary.html">Git Glossary</a>。</p>
 
 <p><em>alternate object database</em></p>
 
@@ -202,7 +202,7 @@ repository.
 
 <p><em>fetch（抓取）</em></p>
 
-<blockquote><p>  抓取一个分支意味着：得到远端仓库(remote repository)分支的head ref，找出本地对象数据库所缺少的对象，并把它们下载下来。你可以参考一下 <a href="../www.kernel.org/pub/software/scm/git/docs/git-fetch.html">git fetch</a>。</p></blockquote>
+<blockquote><p>  抓取一个分支意味着：得到远端仓库(remote repository)分支的head ref，找出本地对象数据库所缺少的对象，并把它们下载下来。你可以参考一下 <a href="http://www.kernel.org/pub/software/scm/git/docs/git-fetch.html">git fetch</a>。</p></blockquote>
 
 <p><em>file system（文件系统）</em></p>
 
@@ -228,7 +228,7 @@ created. Configured via the `.git/info/grafts` file.
 
 <p><em>head</em></p>
 
-<blockquote><p>  指向一个分支最新提交的命名引用(named reference)。除非使用了打包引用(packed refs)，heads 一般存储在 <code>$GIT_DIR/refs/heads/</code>。    参见: <a href="../www.kernel.org/pub/software/scm/git/docs/git-pack-refs.html">git pack-refs</a></p></blockquote>
+<blockquote><p>  指向一个分支最新提交的命名引用(named reference)。除非使用了打包引用(packed refs)，heads 一般存储在 <code>$GIT_DIR/refs/heads/</code>。    参见: <a href="http://www.kernel.org/pub/software/scm/git/docs/git-pack-refs.html">git pack-refs</a></p></blockquote>
 
 <p><em>HEAD</em></p>
 
@@ -371,7 +371,7 @@ parents.
 <pre><code>routines that help select changes that add or delete a given text
 string. With the `--pickaxe-all` option, it can be used to view the full
 changeset that introduced or removed, say, a
-particular line of text. See <a href="../www.kernel.org/pub/software/scm/git/docs/git-diff.html">git diff</a>.
+particular line of text. See <a href="http://www.kernel.org/pub/software/scm/git/docs/git-diff.html">git diff</a>.
 </code></pre></blockquote>
 
 <p><em>plumbing</em></p>
@@ -389,7 +389,7 @@ interface than the plumbing.
 
 <p><em>pull（拉）</em></p>
 
-<blockquote><p>  拉(pull)一个分支意味着，把它抓取(fetch)下来并合并(merge)进当前的分支。可以参考 <a href="../www.kernel.org/pub/software/scm/git/docs/git-pull.html">git pull</a>.</p></blockquote>
+<blockquote><p>  拉(pull)一个分支意味着，把它抓取(fetch)下来并合并(merge)进当前的分支。可以参考 <a href="http://www.kernel.org/pub/software/scm/git/docs/git-pull.html">git pull</a>.</p></blockquote>
 
 <p><em>push</em></p>
 
@@ -436,12 +436,12 @@ that they contain.
 
 <p><em>reflog</em></p>
 
-<blockquote><p>  reflog用以表示本地的ref的历史记录。从另外一角度也可以说，它能行告诉你这个仓库最近的第3个版本(revision)是什么，还可以告诉你昨天晚上9点14分时你是在这个仓库的哪个分支下工作。可以参见:<a href="../www.kernel.org/pub/software/scm/git/docs/git-reflog.html">git reflog</a>。</p></blockquote>
+<blockquote><p>  reflog用以表示本地的ref的历史记录。从另外一角度也可以说，它能行告诉你这个仓库最近的第3个版本(revision)是什么，还可以告诉你昨天晚上9点14分时你是在这个仓库的哪个分支下工作。可以参见:<a href="http://www.kernel.org/pub/software/scm/git/docs/git-reflog.html">git reflog</a>。</p></blockquote>
 
 <p><em>refspec</em></p>
 
 <blockquote><p>  "refspec"用于描述在抓取和推的过程中，远程ref和本地ref之间的映射关系。它用冒号连接：<src>:<dst>，前面也可以加一个加号：“+“。
-  例如：<code>git fetch $URL refs/heads/master:refs/heads/origin</code> 意味着：从$URL抓取主分支的 head 并把它保存到本地的origin分支的head中。<code>git push $URL refs/heads/master:refs/heads/to-upstream</code> 意味着：把我本地主分支 head 推到$URL上的 to-upstream分支里。具体可以参见： <a href="../www.kernel.org/pub/software/scm/git/docs/git-push.html">git push</a>。</p></blockquote>
+  例如：<code>git fetch $URL refs/heads/master:refs/heads/origin</code> 意味着：从$URL抓取主分支的 head 并把它保存到本地的origin分支的head中。<code>git push $URL refs/heads/master:refs/heads/to-upstream</code> 意味着：把我本地主分支 head 推到$URL上的 to-upstream分支里。具体可以参见： <a href="http://www.kernel.org/pub/software/scm/git/docs/git-push.html">git push</a>。</p></blockquote>
 
 <p><em>repository</em></p>
 
@@ -484,8 +484,8 @@ parents, even though they are recorded in the commit
 object). This is sometimes useful when you are interested only in the
 recent history of a project even though the real history recorded in the
 upstream is much larger. A shallow repository
-is created by giving the `--depth` option to <a href="../www.kernel.org/pub/software/scm/git/docs/git-clone.html">git clone</a>, and
-its history can be later deepened with <a href="../www.kernel.org/pub/software/scm/git/docs/git-fetch.html">git fetch</a>.
+is created by giving the `--depth` option to <a href="http://www.kernel.org/pub/software/scm/git/docs/git-clone.html">git clone</a>, and
+its history can be later deepened with <a href="http://www.kernel.org/pub/software/scm/git/docs/git-fetch.html">git fetch</a>.
 </code></pre></blockquote>
 
 <p><em>symref</em></p>
@@ -495,7 +495,7 @@ its history can be later deepened with <a href="../www.kernel.org/pub/software/s
 <pre><code>id itself, it is of the format 'ref: refs/some/thing' and when
 referenced, it recursively dereferences to this reference.
 'HEAD' is a prime example of a symref. Symbolic
-references are manipulated with the <a href="../www.kernel.org/pub/software/scm/git/docs/git-symbolic-ref.html">git symbolic-ref</a>
+references are manipulated with the <a href="http://www.kernel.org/pub/software/scm/git/docs/git-symbolic-ref.html">git symbolic-ref</a>
 command.
 </code></pre></blockquote>
 

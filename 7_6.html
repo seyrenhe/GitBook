@@ -33,7 +33,7 @@
 
 <h3>创建blob对象</h3>
 
-<p>在你的Git仓库中创建一个blob对象并且得到它的SHA值是很容易的, 使用<a href="../www.kernel.org/pub/software/scm/git/docs/git-hash-object.html">git hash-object</a>就足够了. 要使用一个现有的文件去创建新blob, 使用'-w'选项去运行前面提到的命令('-w'选项告诉Git要生成blob, 而不是仅仅计算SHA值).</p>
+<p>在你的Git仓库中创建一个blob对象并且得到它的SHA值是很容易的, 使用<a href="http://www.kernel.org/pub/software/scm/git/docs/git-hash-object.html">git hash-object</a>就足够了. 要使用一个现有的文件去创建新blob, 使用'-w'选项去运行前面提到的命令('-w'选项告诉Git要生成blob, 而不是仅仅计算SHA值).</p>
 
 <pre><code>$ git hash-object -w myfile.txt
 6ff87c4664981e4397625791c8ea3bbb5f2279a3
@@ -46,13 +46,13 @@ $ git hash-object -w myfile2.txt
 
 <h3>创建tree对象</h3>
 
-<p>假设你要使用你创建的一些对象去组建一棵树, 按照<a href="../www.kernel.org/pub/software/scm/git/docs/git-ls-tree.html">git ls-tree</a>的格式组织好输入, <a href="../www.kernel.org/pub/software/scm/git/docs/git-mktree.html">git mktree</a>就可以为你生成需要的tree对象. 例如, 如果你把下面的信息写入到'/tmp/tree.txt'中:</p>
+<p>假设你要使用你创建的一些对象去组建一棵树, 按照<a href="http://www.kernel.org/pub/software/scm/git/docs/git-ls-tree.html">git ls-tree</a>的格式组织好输入, <a href="http://www.kernel.org/pub/software/scm/git/docs/git-mktree.html">git mktree</a>就可以为你生成需要的tree对象. 例如, 如果你把下面的信息写入到'/tmp/tree.txt'中:</p>
 
 <pre><code>100644 blob 6ff87c4664981e4397625791c8ea3bbb5f2279a3    file1
 100644 blob 3bb0e8592a41ae3185ee32266c860714980dbed7    file2
 </code></pre>
 
-<p>然后通过管道把这些信息输入到<a href="../www.kernel.org/pub/software/scm/git/docs/git-mktree.html">git mktree</a>中, Git会生成一个新的tree对象, 把它写入到对象数据库(object database)中, 然后返回tree对象的SHA值.</p>
+<p>然后通过管道把这些信息输入到<a href="http://www.kernel.org/pub/software/scm/git/docs/git-mktree.html">git mktree</a>中, Git会生成一个新的tree对象, 把它写入到对象数据库(object database)中, 然后返回tree对象的SHA值.</p>
 
 <pre><code>$ cat /tmp/tree.txt | git mk-tree
 f66a66ab6a7bfe86d52a66516ace212efa00fe1f
@@ -64,7 +64,7 @@ f66a66ab6a7bfe86d52a66516ace212efa00fe1f
 040000 tree f66a66ab6a7bfe86d52a66516ace212efa00fe1f    our_files
 </code></pre>
 
-<p>然后再次调用<a href="../www.kernel.org/pub/software/scm/git/docs/git-mk-tree.html">git mk-tree</a>:</p>
+<p>然后再次调用<a href="http://www.kernel.org/pub/software/scm/git/docs/git-mk-tree.html">git mk-tree</a>:</p>
 
 <pre><code>$ cat /tmp/newtree.txt | git mk-tree
 5bac6559179bd543a024d6d187692343e2d8ae83
@@ -87,7 +87,7 @@ f66a66ab6a7bfe86d52a66516ace212efa00fe1f
 
 <p>我们也可以使用索引文件把树嵌入到新的结构中. 举个简单的例子, 我们使用一个临时索引文件创建一棵新的树, 其中包含了<code>5bac6559</code>这棵树的两个副本. (设置GIT_INDEX_FILE环境变量使之指向临时索引文件)</p>
 
-<p>首先, 用<a href="../www.kernel.org/pub/software/scm/git/docs/git-read-tree.html">git read-tree</a>把树对象读入到临时索引文件中, 并给每个副本一个新的前缀; 然后再用<a href="../www.kernel.org/pub/software/scm/git/docs/git-write-tree.html">git write-tree</a>把索引中的内容生成一棵新的树:</p>
+<p>首先, 用<a href="http://www.kernel.org/pub/software/scm/git/docs/git-read-tree.html">git read-tree</a>把树对象读入到临时索引文件中, 并给每个副本一个新的前缀; 然后再用<a href="http://www.kernel.org/pub/software/scm/git/docs/git-write-tree.html">git write-tree</a>把索引中的内容生成一棵新的树:</p>
 
 <pre><code>$ export GIT_INDEX_FILE=/tmp/index
 $ git read-tree --prefix=copy1/  5bac6559
@@ -100,11 +100,11 @@ $&gt;git ls-tree bb2fa
 040000 tree 5bac6559179bd543a024d6d187692343e2d8ae83    copy2
 </code></pre>
 
-<p>现在我们可以看到, 通过操纵索引文件可以得到一棵新的树. 你也可以在临时索引文件中做合并等操作 - 请参见<a href="../www.kernel.org/pub/software/scm/git/docs/git-read-tree.html">git read-tree</a>取得更多信息.</p>
+<p>现在我们可以看到, 通过操纵索引文件可以得到一棵新的树. 你也可以在临时索引文件中做合并等操作 - 请参见<a href="http://www.kernel.org/pub/software/scm/git/docs/git-read-tree.html">git read-tree</a>取得更多信息.</p>
 
 <h3>创建commit对象</h3>
 
-<p>现在我们有了一棵树的SHA值, 我们可以使用<a href="../www.kernel.org/pub/software/scm/git/docs/git-commit-tree.html">git commit-tree</a>命令创建一个指向它的commit对象. 大部分commit对象的数据都是通过环境变量来设定的, 你需要设置下面的环境变量:</p>
+<p>现在我们有了一棵树的SHA值, 我们可以使用<a href="http://www.kernel.org/pub/software/scm/git/docs/git-commit-tree.html">git commit-tree</a>命令创建一个指向它的commit对象. 大部分commit对象的数据都是通过环境变量来设定的, 你需要设置下面的环境变量:</p>
 
 <pre><code>GIT_AUTHOR_NAME
 GIT_AUTHOR_EMAIL
@@ -114,7 +114,7 @@ GIT_COMMITTER_EMAIL
 GIT_COMMITTER_DATE
 </code></pre>
 
-<p>然后你把你的提交信息写入到一个文件中并且通过管道传送给<a href="../www.kernel.org/pub/software/scm/git/docs/git-commit-tree.html">git commit-tree</a>, 即可得到一个commit对象.</p>
+<p>然后你把你的提交信息写入到一个文件中并且通过管道传送给<a href="http://www.kernel.org/pub/software/scm/git/docs/git-commit-tree.html">git commit-tree</a>, 即可得到一个commit对象.</p>
 
 <pre><code>$ git commit-tree bb2fa &lt; /tmp/message
 a5f85ba5875917319471dfd98dfc636c1dc65650
@@ -124,7 +124,7 @@ a5f85ba5875917319471dfd98dfc636c1dc65650
 
 <h3>更新分支的引用</h3>
 
-<p>现在我得拿到了新的commit对象的SHA值, 如有需要, 我们可以使用一个分支指向它. 比如说我们需要更新'master'分支的引用, 使其指向刚刚创建的新对象, 我们可以使用<a href="../www.kernel.org/pub/software/scm/git/docs/git-update-ref.html">git update-ref</a>去完成这个工作:</p>
+<p>现在我得拿到了新的commit对象的SHA值, 如有需要, 我们可以使用一个分支指向它. 比如说我们需要更新'master'分支的引用, 使其指向刚刚创建的新对象, 我们可以使用<a href="http://www.kernel.org/pub/software/scm/git/docs/git-update-ref.html">git update-ref</a>去完成这个工作:</p>
 
 <pre><code>$ git update-ref refs/heads/master a5f85ba5875917319471dfd98dfc636c1dc65650
 </code></pre>

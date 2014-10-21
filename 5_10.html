@@ -39,7 +39,7 @@
 
 <p>Git的子模块(submodule)功能使得一个仓库可以用子目录的形式去包含一个外部项目的签出版本. 子模块维护它们自己的身份标记(identity); 子模块功能仅仅储存子模块仓库的位置和提交ID, 因此其他克隆父项目("superproject")的开发者可以轻松克隆所有子模块的同一版本. 对父项目的部分签出成为可能: 你可以告诉git去克隆一部分或者所有的子模块, 也可以一个都不克隆.</p>
 
-<p>Git 1.5.3中加入了<a href="../www.kernel.org/pub/software/scm/git/docs/git-submodule.html">git submodule</a>这个命令. Git 1.5.2版本的用户可以查找仓库的子模块并且手工签出; 更早的版本不支持子模块功能.</p>
+<p>Git 1.5.3中加入了<a href="http://www.kernel.org/pub/software/scm/git/docs/git-submodule.html">git submodule</a>这个命令. Git 1.5.2版本的用户可以查找仓库的子模块并且手工签出; 更早的版本不支持子模块功能.</p>
 
 <p>为说明子模块的使用方法, 创建4个用作子模块的示例仓库:</p>
 
@@ -80,7 +80,7 @@ done
 
 <ul>
 <li>它在当前目录下克隆各个子模块, 默认签出master分支.</li>
-<li>它把子模块的克隆路径加入到<a href="../www.kernel.org/pub/software/scm/git/docs/gitmodules.html">gitmodules</a>文件中, 然后把这个文件加入到索引, 准备进行提交.</li>
+<li>它把子模块的克隆路径加入到<a href="http://www.kernel.org/pub/software/scm/git/docs/gitmodules.html">gitmodules</a>文件中, 然后把这个文件加入到索引, 准备进行提交.</li>
 <li>它把子模块的当前提交ID加入到索引中, 准备进行提交.</li>
 </ul>
 

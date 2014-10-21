@@ -110,7 +110,7 @@ Bob修改文件内容的同时也做了修改的话，她可能需要手工去�
 </code></pre>
 
 <p>(如果要查看git clone创建的所有配置参数，可以使用"git config -l",
-<a href="../www.kernel.org/pub/software/scm/git/docs/git-config.html">git config</a> 的帮助文件里解释了每个参数的含义.)</p>
+<a href="http://www.kernel.org/pub/software/scm/git/docs/git-config.html">git config</a> 的帮助文件里解释了每个参数的含义.)</p>
 
 <p>Git同时也保存了一份最初(pristine)的Alice主分支(master)，在
 "origin/master"下面。</p>
@@ -126,14 +126,14 @@ Bob修改文件内容的同时也做了修改的话，她可能需要手工去�
 </code></pre>
 
 <p>git有他自带的协议(native protocol),还可以使用rsync或http; 你可以点
-这里 <a href="../www.kernel.org/pub/software/scm/git/docs/git-pull.html">git pull</a> 看一看更詳細的用法。</p>
+这里 <a href="http://www.kernel.org/pub/software/scm/git/docs/git-pull.html">git pull</a> 看一看更詳細的用法。</p>
 
 <p>Git也可以像CVS一样来工作：有一个中心仓库，不同的用户向它推送(push)
-自己所作的修改；你可以看看这里： <a href="../www.kernel.org/pub/software/scm/git/docs/git-push.html">git push</a> <a href="../www.kernel.org/pub/software/scm/git/docs/gitcvs-migration.html">gitcvs-migration</a>.</p>
+自己所作的修改；你可以看看这里： <a href="http://www.kernel.org/pub/software/scm/git/docs/git-push.html">git push</a> <a href="http://www.kernel.org/pub/software/scm/git/docs/gitcvs-migration.html">gitcvs-migration</a>.</p>
 
 <h3>公共Git仓库</h3>
 
-<p>另外一个提交修改的办法，就是告诉项目的维护者(maintainer)用 <a href="../www.kernel.org/pub/software/scm/git/docs/git-pull.html">git pull</a>
+<p>另外一个提交修改的办法，就是告诉项目的维护者(maintainer)用 <a href="http://www.kernel.org/pub/software/scm/git/docs/git-pull.html">git pull</a>
 命令从你的仓库里把修改拉下来。这和从主仓库"里更新代码类似，但是是从
 另外一个方向来更新的。</p>
 
@@ -179,7 +179,7 @@ $ git pull /path/to/other/repository
 
 <p>译者注: 通过http的WebDav协议是可以有写权限的,也有人配置了git over http.</p>
 
-<p>最简单的办法就是用 <a href="../www.kernel.org/pub/software/scm/git/docs/git-push.html">git push</a>命令 和ssh协议; 用你本地的"master"
+<p>最简单的办法就是用 <a href="http://www.kernel.org/pub/software/scm/git/docs/git-push.html">git push</a>命令 和ssh协议; 用你本地的"master"
 分支去更新远程的"master"分支，执行下面的命令:</p>
 
 <pre><code>$ git push ssh://yourserver.com/~you/proj.git master:master
@@ -215,7 +215,7 @@ EOF
 <pre><code>$ git push public-repo master
 </code></pre>
 
-<p>你可以点击这里: <a href="../www.kernel.org/pub/software/scm/git/docs/git-config.html">git config</a>，查看remote.<name>.url,
+<p>你可以点击这里: <a href="http://www.kernel.org/pub/software/scm/git/docs/git-config.html">git config</a>，查看remote.<name>.url,
 branch.<name>.remote, 和remote.<name>.push等选项的解释.</p>
 
 <h3>当推送代码失败时要怎么办</h3>
@@ -256,7 +256,7 @@ intend to manage the branch.</p>
 the right to push to the same repository.  In that case, the correct
 solution is to retry the push after first updating your work: either by a
 pull, or by a fetch followed by a rebase; see the next section and
-<a href="../www.kernel.org/pub/software/scm/git/docs/gitcvs-migration.html">gitcvs-migration</a> for more.</p>
+<a href="http://www.kernel.org/pub/software/scm/git/docs/gitcvs-migration.html">gitcvs-migration</a> for more.</p>
 
 <p><a href="" title="GitCast #8: Distributed Workflow">gitcast:c8-dist-workflow</a></p>
 

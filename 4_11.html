@@ -45,9 +45,9 @@ $ touch proj.git/git-daemon-export-ok
 
 <p>如果这台服务器上有管理员，TA们要告诉你把仓库放在哪一个目录中, 并且“git:// URL”除仓库目录部分外是什么.</p>
 
-<p>你现在要做的是启动 <a href="../www.kernel.org/pub/software/scm/git/docs/git-daemon.html">git daemon</a>; 它会监听在 9418端口. 默认情况下它会允许你访问所有的git目录(看目录中是否有git-daemon-export-ok文件). 如果以某些目录做为 git-daemon 的参数, 那么 git-daemon 会限制用户通过git协议只能访问这些目录.</p>
+<p>你现在要做的是启动 <a href="http://www.kernel.org/pub/software/scm/git/docs/git-daemon.html">git daemon</a>; 它会监听在 9418端口. 默认情况下它会允许你访问所有的git目录(看目录中是否有git-daemon-export-ok文件). 如果以某些目录做为 git-daemon 的参数, 那么 git-daemon 会限制用户通过git协议只能访问这些目录.</p>
 
-<p>你可以在inetd service模式下运行 git-daemon; 点击 <a href="../www.kernel.org/pub/software/scm/git/docs/git-daemon.html">git daemon</a>　可以查看帮助信息.</p>
+<p>你可以在inetd service模式下运行 git-daemon; 点击 <a href="http://www.kernel.org/pub/software/scm/git/docs/git-daemon.html">git daemon</a>　可以查看帮助信息.</p>
 
 <h3>通过http协议导出git仓库</h3>
 
@@ -61,7 +61,7 @@ $ git --bare update-server-info
 $ chmod a+x hooks/post-update
 </code></pre>
 
-<p>(最后两行命令的解释可以点击这里查看: <a href="../www.kernel.org/pub/software/scm/git/docs/git-update-server-info.html">git update-server-info</a> &amp;  <a href="../www.kernel.org/pub/software/scm/git/docs/githooks.html">githooks</a>.)</p>
+<p>(最后两行命令的解释可以点击这里查看: <a href="http://www.kernel.org/pub/software/scm/git/docs/git-update-server-info.html">git update-server-info</a> &amp;  <a href="http://www.kernel.org/pub/software/scm/git/docs/githooks.html">githooks</a>.)</p>
 
 <p>拼好了proj.git的web URL, 任何人都可以从这个地址来克隆(clone)或拉取(pull) git仓库内容. 下面这个命令就是例子:</p>
 

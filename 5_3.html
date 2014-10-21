@@ -31,7 +31,7 @@
 
 <h3>在合并过程中得到解决冲突的协助</h3>
 
-<p>git会把所有可以自动合并的修改加入到索引中去, 所以<a href="../www.kernel.org/pub/software/scm/git/docs/git-diff.html">git diff</a>只会显示有冲突的部分. 它使用了一种不常见的语法:</p>
+<p>git会把所有可以自动合并的修改加入到索引中去, 所以<a href="http://www.kernel.org/pub/software/scm/git/docs/git-diff.html">git diff</a>只会显示有冲突的部分. 它使用了一种不常见的语法:</p>
 
 <pre><code>$ git diff
 diff --cc file.txt
@@ -55,9 +55,9 @@ $ git show :2:file.txt  # HEAD中的版本.
 $ git show :3:file.txt  # MERGE_HEAD中的版本.
 </code></pre>
 
-<p>当你使用<a href="../www.kernel.org/pub/software/scm/git/docs/git-diff.html">git diff</a>去显示冲突时, 它在工作树(work tree), 暂存2(stage 2)和暂存3(stage 3)之间执行三路diff操作, 只显示那些两方都有的块(换句话说, 当一个块的合并结果只从暂存2中得到时, 是不会被显示出来的; 对于暂存3来说也是一样).</p>
+<p>当你使用<a href="http://www.kernel.org/pub/software/scm/git/docs/git-diff.html">git diff</a>去显示冲突时, 它在工作树(work tree), 暂存2(stage 2)和暂存3(stage 3)之间执行三路diff操作, 只显示那些两方都有的块(换句话说, 当一个块的合并结果只从暂存2中得到时, 是不会被显示出来的; 对于暂存3来说也是一样).</p>
 
-<p>上面的diff结果显示了file.txt在工作树, 暂存2和暂存3中的差异. git不在每行前面加上单个'+'或者'-', 相反地, 它使用两栏去显示差异: 第一栏用于显示第一个父提交与工作目录文件拷贝的差异, 第二栏用于显示第二个父提交与工作文件拷贝的差异. (参见<a href="../www.kernel.org/pub/software/scm/git/docs/git-diff-files.html">git diff-files</a>中的"COMBINED DIFF FORMAT"取得此格式详细信息.)</p>
+<p>上面的diff结果显示了file.txt在工作树, 暂存2和暂存3中的差异. git不在每行前面加上单个'+'或者'-', 相反地, 它使用两栏去显示差异: 第一栏用于显示第一个父提交与工作目录文件拷贝的差异, 第二栏用于显示第二个父提交与工作文件拷贝的差异. (参见<a href="http://www.kernel.org/pub/software/scm/git/docs/git-diff-files.html">git diff-files</a>中的"COMBINED DIFF FORMAT"取得此格式详细信息.)</p>
 
 <p>在用直观的方法解决冲突之后(但是在更新索引之前), diff输出会变成下面的样子:</p>
 
@@ -84,7 +84,7 @@ $ git diff -3 file.txt      # 与暂存3进行比较
 $ git diff --theirs file.txt    # 与上相同.
 </code></pre>
 
-<p><a href="../www.kernel.org/pub/software/scm/git/docs/git-log.html">git log</a>和<a href="../www.kernel.org/pub/software/scm/git/docs/gitk.html">gitk</a>命令也为合并操作提供了特别的协助:</p>
+<p><a href="http://www.kernel.org/pub/software/scm/git/docs/git-log.html">git log</a>和<a href="http://www.kernel.org/pub/software/scm/git/docs/gitk.html">gitk</a>命令也为合并操作提供了特别的协助:</p>
 
 <pre><code>$ git log --merge
 $ gitk --merge
@@ -92,7 +92,7 @@ $ gitk --merge
 
 <p>这会显示所有那些只在HEAD或者只在MERGE_HEAD中存在的提交, 还有那些更新(touch)了未合并文件的提交.</p>
 
-<p>你也可以使用<a href="../www.kernel.org/pub/software/scm/git/docs/git-mergetool.html">git mergetool</a>, 它允许你使用外部工具如emacs或kdiff3去合并文件.</p>
+<p>你也可以使用<a href="http://www.kernel.org/pub/software/scm/git/docs/git-mergetool.html">git mergetool</a>, 它允许你使用外部工具如emacs或kdiff3去合并文件.</p>
 
 <p>每次你解决冲突之后, 应该更新索引:</p>
 
@@ -103,7 +103,7 @@ $ gitk --merge
 
 <h3>多路合并</h3>
 
-<p>你可以一次合并多个头, 只需简单地把它们作为<a href="../www.kernel.org/pub/software/scm/git/docs/git-merge.html">git merge</a>的参数列出. 例如,</p>
+<p>你可以一次合并多个头, 只需简单地把它们作为<a href="http://www.kernel.org/pub/software/scm/git/docs/git-merge.html">git merge</a>的参数列出. 例如,</p>
 
 <pre><code>$ git merge scott/master rick/master tom/master
 </code></pre>
@@ -142,7 +142,7 @@ $ git pull -s subtree Bproject master (5)
 
 <p>另外, 若你需要修改内嵌外部项目的内容, 使用子模块方式可以更容易地提交你的修改.</p>
 
-<p>(from <a href="../www.kernel.org/pub/software/scm/git/docs/howto/using-merge-subtree.html">Using Subtree Merge</a>)</p>
+<p>(from <a href="http://www.kernel.org/pub/software/scm/git/docs/howto/using-merge-subtree.html">Using Subtree Merge</a>)</p>
 
 
   </div>

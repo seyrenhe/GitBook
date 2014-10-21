@@ -33,18 +33,18 @@
 
 <p>如果你只做了少量的改动, 最简单的提交方法就是把它们做成补丁(patch)用邮件发出去:</p>
 
-<p>首先, 使用<a href="../www.kernel.org/pub/software/scm/git/docs/git-format-patch.html">git format-patch</a>; 例如:</p>
+<p>首先, 使用<a href="http://www.kernel.org/pub/software/scm/git/docs/git-format-patch.html">git format-patch</a>; 例如:</p>
 
 <pre><code>$ git format-patch origin
 </code></pre>
 
 <p>这会在当前目录生成一系统编号的补丁文件, 每一个补丁文件都包含了当前分支和origin/HEAD之间的差异内容.</p>
 
-<p>然后你可以手工把这些文件导入你的Email客户端. 但是如果你需要一次发送很多补丁, 你可能会更喜欢使用<a href="../www.kernel.org/pub/software/scm/git/docs/git-send-email.html">git send-email</a>脚本去自动完成这个工作. 在发送之前, 应当先到项目的邮件列表上咨询一下项目管理者, 了解他们管理这些补丁的方式.</p>
+<p>然后你可以手工把这些文件导入你的Email客户端. 但是如果你需要一次发送很多补丁, 你可能会更喜欢使用<a href="http://www.kernel.org/pub/software/scm/git/docs/git-send-email.html">git send-email</a>脚本去自动完成这个工作. 在发送之前, 应当先到项目的邮件列表上咨询一下项目管理者, 了解他们管理这些补丁的方式.</p>
 
 <h3>向一个项目中导入补丁</h3>
 
-<p>Git也提供了一个名为<a href="../www.kernel.org/pub/software/scm/git/docs/git-am.html">git am</a>的工具(am是"apply mailbox"的缩写)去应用那些通过Email寄来的系列补丁. 你只需要按顺序把所有包含补丁的消息存入单个的mailbox文件, 比如说"patches.mbox", 然后运行</p>
+<p>Git也提供了一个名为<a href="http://www.kernel.org/pub/software/scm/git/docs/git-am.html">git am</a>的工具(am是"apply mailbox"的缩写)去应用那些通过Email寄来的系列补丁. 你只需要按顺序把所有包含补丁的消息存入单个的mailbox文件, 比如说"patches.mbox", 然后运行</p>
 
 <pre><code>$ git am -3 patches.mbox
 </code></pre>

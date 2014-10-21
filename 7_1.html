@@ -76,7 +76,7 @@
 
 <p>Git使用打包文件(packfile)去节省空间. 在这个格式中, Git只会保存第二个文件中改变了的部分, 然后用一个指针指向相似的那个文件(译注: 即第一个文件).</p>
 
-<p>对象通常是以松散格式写到磁盘上, 因为这个格式的访问代价比较低. 然后, 你最终会需要把对象存放到打包格式中去节省磁盘空间 - 这个工作可以通过<a href="../www.kernel.org/pub/software/scm/git/docs/git-gc.html">git gc</a>来完成. 它使用一个相当复杂的启发式算法去决定哪些文件是最相似的, 然后基于此分析去计算差异. 可以存在多个打包文件, 在必要情况下, 它们可被解包(<a href="../www.kernel.org/pub/software/scm/git/docs/git-unpack-objects.html">git unpack-objects</a>)成为松散对象或者重新打包(<a href="../www.kernel.org/pub/software/scm/git/docs/git-repack.html">git repack</a>).</p>
+<p>对象通常是以松散格式写到磁盘上, 因为这个格式的访问代价比较低. 然后, 你最终会需要把对象存放到打包格式中去节省磁盘空间 - 这个工作可以通过<a href="http://www.kernel.org/pub/software/scm/git/docs/git-gc.html">git gc</a>来完成. 它使用一个相当复杂的启发式算法去决定哪些文件是最相似的, 然后基于此分析去计算差异. 可以存在多个打包文件, 在必要情况下, 它们可被解包(<a href="http://www.kernel.org/pub/software/scm/git/docs/git-unpack-objects.html">git unpack-objects</a>)成为松散对象或者重新打包(<a href="http://www.kernel.org/pub/software/scm/git/docs/git-repack.html">git repack</a>).</p>
 
 <p>Git会为每一个打包文件创建一个较小的索引文件. 索引文件中包含了对象在打包文件中的偏移, 以便于通过SHA值来快速找到特定的对象.</p>
 

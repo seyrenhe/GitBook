@@ -38,17 +38,17 @@
 
 <p>偶尔的情况下全名会比较有用, 例如你的标签和分支重名了, 你应该用全名去区分它们.</p>
 
-<p>(新创建的引用会依据它们的名字存放在.git/refs目录中. 然而, 为了提高效率, 它们也可能被打包到一个文件中, 参见<a href="../www.kernel.org/pub/software/scm/git/docs/git-pack-refs.html">git pack-refs</a>).</p>
+<p>(新创建的引用会依据它们的名字存放在.git/refs目录中. 然而, 为了提高效率, 它们也可能被打包到一个文件中, 参见<a href="http://www.kernel.org/pub/software/scm/git/docs/git-pack-refs.html">git pack-refs</a>).</p>
 
 <p>另一个有用的技巧是, 仓库的名字可以代表该仓库的HEAD. 例如, "origin"是访问"origin"中的HEAD分支的一个捷径.</p>
 
-<p>要了解Git查找引用路径的完全列表, 以及多个同名简写引用的优先级关系, 请参见<a href="../www.kernel.org/pub/software/scm/git/docs/git-rev-parse.html">git rev-parse</a>中的"SPECIFYING REVISIONS".</p>
+<p>要了解Git查找引用路径的完全列表, 以及多个同名简写引用的优先级关系, 请参见<a href="http://www.kernel.org/pub/software/scm/git/docs/git-rev-parse.html">git rev-parse</a>中的"SPECIFYING REVISIONS".</p>
 
 <h3>显示某分支特有的提交</h3>
 
 <p>假设你想要查看在"master"分支可达(reachable)但其他任何分支不可达的提交.</p>
 
-<p>我们可以使用<a href="../www.kernel.org/pub/software/scm/git/docs/git-show-ref.html">git show-ref</a>列出仓库中所有的头:</p>
+<p>我们可以使用<a href="http://www.kernel.org/pub/software/scm/git/docs/git-show-ref.html">git show-ref</a>列出仓库中所有的头:</p>
 
 <pre><code>$ git show-ref --heads
 bf62196b5e363d73353a9dcf094c59595f3153b7 refs/heads/core-tutorial
@@ -78,7 +78,7 @@ refs/heads/tutorial-fixes
 <pre><code>$ gitk $( git show-ref --heads ) --not  $( git show-ref --tags )
 </code></pre>
 
-<p>(<a href="../www.kernel.org/pub/software/scm/git/docs/git-rev-parse.html">git rev-parse</a>提供了像"--not"之类的"选择提交"语法的解释.)</p>
+<p>(<a href="http://www.kernel.org/pub/software/scm/git/docs/git-rev-parse.html">git rev-parse</a>提供了像"--not"之类的"选择提交"语法的解释.)</p>
 
 <p>(!!update-ref!!)</p>
 
